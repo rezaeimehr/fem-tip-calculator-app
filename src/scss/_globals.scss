@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $lightGrayishcyan1;
+  font-family: 'Space Mono', monospace;
+}
+
+main {
+  height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: $strongCyan;
+  color: $veryDarkCyan;
+  padding: 0.5rem 0;
+  border: none;
+  outline: none;
+  margin-top: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+
+  &:hover {
+    background: $lightGrayishcyan1;
+  }
+
+  &:disabled {
+    background: $lightGrayishcyan1;
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}

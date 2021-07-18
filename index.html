@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="dist/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+    </header>
+
+    <main>
+      <div class="calculator">
+        <div class="calculator__bill-tip-people">
+          <div class="calculator__bill">
+            <label class="calculator__input-label" for="bill"> Bill </label>
+            <div class="calculator__input-wrapper">
+              <img
+                class="calculator__input-icn"
+                src="images/icon-dollar.svg"
+                alt="dollar-icon"
+              />
+              <input
+                class="calculator__input"
+                id="bill"
+                placeholder="0"
+                type="number"
+              />
+            </div>
+          </div>
+
+          <div class="calculator__select-tip">
+            <label class="calculator__input-label" for="select-tip">
+              Select Tip %
+            </label>
+            <div>
+              <div class="calculator__select-tip-percent">
+                <div class="calculator__tip-percent" data-tip-percent="5">
+                  <span> 5% </span>
+                </div>
+                <div class="calculator__tip-percent" data-tip-percent="10">
+                  <span> 10% </span>
+                </div>
+                <div class="calculator__tip-percent" data-tip-percent="15">
+                  <span> 15% </span>
+                </div>
+                <div class="calculator__tip-percent" data-tip-percent="25">
+                  <span> 25% </span>
+                </div>
+                <div class="calculator__tip-percent" data-tip-percent="50">
+                  <span> 50% </span>
+                </div>
+                <div class="calculator__input-wrapper">
+                  <input
+                    class="calculator__input"
+                    id="select-tip"
+                    placeholder="Custom"
+                    type="number"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculator__num-of-people">
+            <label class="calculator__input-label" for="number-of-people-input">
+              Number of People
+            </label>
+            <div class="calculator__input-wrapper">
+              <img
+                class="calculator__input-icn"
+                src="images/icon-person.svg"
+                alt="person-icon"
+              />
+              <input
+                class="calculator__input"
+                id="number-of-people-input"
+                placeholder="0"
+                type="number"
+              />
+            </div>
+            <span> Can't be zero </span>
+          </div>
+        </div>
+
+        <div class="calculator__result-wrapper">
+          <div class="calculator__result">
+            <div>
+              <div class="calculator__result-item">
+                <div>
+                  <span class="calculator__result-amount-text">
+                    Tip Amount
+                  </span>
+                  <span
+                    class="
+                      calculator__result-amount-text
+                      calculator__result-amount-text--person
+                    "
+                  >
+                    / person
+                  </span>
+                </div>
+                <div>
+                  <span
+                    id="tip-amount-each-person"
+                    class="calculator__result-amount"
+                  >
+                    $0.00
+                  </span>
+                </div>
+              </div>
+
+              <div class="calculator__result-item">
+                <div>
+                  <span class="calculator__result-amount-text"> Total </span>
+                  <span
+                    class="
+                      calculator__result-amount-text
+                      calculator__result-amount-text--person
+                    "
+                  >
+                    / person
+                  </span>
+                </div>
+                <div>
+                  <span
+                    id="total-bill-amount-each-person"
+                    class="calculator__result-amount"
+                  >
+                    $0.00
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn" id="reset-btn" disabled>RESET</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

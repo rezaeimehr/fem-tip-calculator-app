@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+}
+
+main {
+  height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #26c0ab;
+  color: #00494d;
+  padding: 0.5rem 0;
+  border: none;
+  outline: none;
+  margin-top: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #c5e4e7;
+}
+.btn:disabled {
+  background: #c5e4e7;
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.calculator {
+  background-color: white;
+  min-height: inherit;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.calculator__input-wrapper {
+  background-color: #f4fafa;
+  border: 2px solid #f4fafa;
+  display: flex;
+  align-items: center;
+  border-radius: 0.3rem;
+}
+.calculator__input-wrapper:hover, .calculator__input-wrapper:focus, .calculator__input-wrapper:focus-within {
+  border: 2px solid #26c0ab;
+}
+.calculator__input {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: right;
+  padding: 0.3rem 1rem 0.4rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #00494d;
+}
+.calculator__input::placeholder {
+  color: #7f9c9f;
+}
+.calculator__input-icn {
+  padding: 0 1rem;
+}
+.calculator__input-label {
+  font-weight: 700;
+  color: #5e7a7d;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.calculator__bill {
+  margin-bottom: 2rem;
+}
+.calculator__select-tip-percent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 0.9rem;
+}
+.calculator__tip-percent {
+  background-color: #00494d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.calculator__tip-percent:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+.calculator__tip-percent--active, .calculator__tip-percent--active:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+.calculator__num-of-people {
+  margin-bottom: 2rem;
+}
+.calculator__num-of-people span {
+  display: none;
+}
+.calculator__num-of-people--error span {
+  display: block;
+  color: #c93333;
+  position: unset;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+  text-align: right;
+}
+.calculator__num-of-people--error .calculator__input-wrapper {
+  border: 2px solid #c93333;
+}
+.calculator__result-wrapper {
+  padding: 1.8rem 1.5rem 1.6rem;
+  border-radius: 0.8rem;
+  background-color: #00494d;
+}
+.calculator__result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  height: 100%;
+}
+.calculator__result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.calculator__result-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #26c0ab;
+}
+.calculator__result-amount-text {
+  font-size: 0.9rem;
+}
+.calculator__result-amount-text--person {
+  font-size: 0.8rem;
+  color: #7f9c9f;
+  display: block;
+}
+
+@media screen and (min-width: 900px) {
+  .logo {
+    padding: 9rem 0 5rem 0;
+  }
+
+  .calculator {
+    border-radius: 1.5rem;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .calculator__input-wrapper__input {
+    font-size: 1.3rem;
+  }
+  .calculator__bill-tip-people {
+    flex: 0.54;
+    padding-left: 1rem;
+  }
+  .calculator__num-of-people {
+    position: relative;
+  }
+  .calculator__num-of-people--error span {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .calculator__result-wrapper {
+    flex: 0.46;
+  }
+  .calculator__result-wrapper {
+    padding: 2.2rem 2.2rem 2.2rem;
+  }
+  .calculator__select-tip-percent {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .calculator__result-amount {
+    font-size: 2.6rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
